@@ -1,4 +1,4 @@
-"""Script to test internationisation"""
+"""Script to test internationalisation"""
 import sys
 import gettext 
 
@@ -23,6 +23,7 @@ def main():
     _ = t.gettext
 
     print _('test')
+    print _('test-a')
 
     print gettext.find('messages')
 
@@ -31,7 +32,9 @@ def main():
     _ = langEN_US.gettext
 
     print _('test')
+    print _('test-a')
     print langEN_US.gettext('test-a')
+    print langEN_US.gettext('test-b')
 
     pass
 
