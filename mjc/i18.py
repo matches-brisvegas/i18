@@ -2,6 +2,7 @@
 import sys
 import gettext 
 
+
 def mjc_test():
     pass
 
@@ -27,18 +28,17 @@ def main():
 
     print gettext.find('messages')
 
-    langEN_US = gettext.translation('messages', 'locale', languages=['en_US'])
-    langEN_US.install()
-    _ = langEN_US.gettext
+    en_us = gettext.translation('messages', 'locale', languages=['en_US'])
+    en_us.install()
+    _ = en_us.gettext
 
     print _('test')
     print _('test-a')
-    print langEN_US.gettext('test-a')
-    print langEN_US.gettext('test-b')
+    print en_us.gettext('test-a')
+    print en_us.gettext('test-b')
 
     pass
 
 if __name__ == '__main__':
     print "main"
     sys.exit(main())
-
